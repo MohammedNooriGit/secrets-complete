@@ -59,8 +59,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL:
-        "https://mighty-fjord-24795.herokuapp.com/auth/google/secrets",
+      callbackURL: "https://mohammed-secrets.onrender.com/auth/google/secrets",
     },
     function (accessToken, refreshToken, profile, cb) {
       User.findOrCreate({ googleId: profile.id }, function (err, user) {
